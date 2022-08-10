@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
-import Estilo from '../estilo'
+import Style from '../style'
 
 export default props => {
     return (
         <View style={style.Display}>
             <Text 
-            style={[Estilo.txtG, style.DisplayText]}>
+            style={[Style.txtG, style.DisplayText]}>
                 {props.num}
             </Text>
         </View>

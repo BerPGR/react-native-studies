@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Filho from './Filho'
+import Son from './Son'
 
 export default props => {
     let x = 13;
@@ -8,7 +8,7 @@ export default props => {
 
     return (
         <>
-            <Filho a={x} b={y}/>
+            <Son a={x} b={y}/>
         </>
     )
 }

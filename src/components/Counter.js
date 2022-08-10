@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 import { Text, Button } from 'react-native'
-import Estilo from './estilo'
+import Style from './style'
 
-export default ({inicial, passo}) => {
-    //let numero = props.inicial
+export default ({initial, pass}) => {
+    //let numero = props.initial
 
-    const [numero, setNumero] = useState(inicial)
+    const [number, setNumero] = useState(initial)
 
     const inc = () => {
-        setNumero(numero + passo)
+        setNumero(number + pass)
     }
 
     const dec = () => {
-        setNumero(numero - passo)
+        setNumero(number - paso)
     }
 
 
     return (
         <>
-            <Text style={Estilo.txtG}>{numero}</Text>
+            <Text style={Style.txtG}>{number}</Text>
             <Button title='+' onPress={inc}/>
             <Button title='-' onPress={dec}/>
         </>

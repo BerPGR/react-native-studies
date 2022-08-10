@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import Estilo from './estilo'
+import Style from './style'
 
 export default props => {
     return (
-        <Text style={Estilo.txtG}></Text>
+        <Text style={Style.txtG}></Text>
     )
 }

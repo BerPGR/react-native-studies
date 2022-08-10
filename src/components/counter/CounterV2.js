@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import { View, Text } from 'react-native'
-import Estilo from '../estilo'
-import Contadordisplay from './ContadorDisplay'
-import Botoes from './ContadorBotoes';
+import Style from '../style'
+import Contadordisplay from './DisplayCounter'
+import Botoes from './ButtonCounter';
 
 export default props => {
     const [num, setNum] = useState(0)
@@ -12,8 +12,8 @@ export default props => {
 
     return (
         <View>
-            <Text style={Estilo.txtG}>
-                Contador V2
+            <Text style={Style.txtG}>
+                Counter V2
             </Text>
             <Contadordisplay num={num} />
             <Botoes inc={inc} dec={dec}/>

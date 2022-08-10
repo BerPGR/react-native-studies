@@ -3,25 +3,25 @@ import { Button } from "react-native";
 
 export default props => {
 
-    function executar() {
+    function doIt() {
         console.warn('Exec');
     }
     
     return (
         <>
         <Button 
-            title="Executar 1!"
-            onPress={executar}
+            title="Action 1!"
+            onPress={doIt}
         />
 
         <Button  
-            title="Executar 2!"
+            title="Action 2!"
             onPress={function() {
                 console.warn('Exec 2')
             }}/>
 
         <Button  
-            title="Executar 3!"
+            title="Action 3!"
             onPress={() => console.warn('Exec 3')}/>
         </>
     )
