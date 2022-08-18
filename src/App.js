@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 
 //import Patter, { Comp1, Comp2 } from './componentes/Multi'
 //import First from './componentes/First'
@@ -11,12 +11,14 @@ import { View, StyleSheet } from 'react-native';
 //import Father from './componentes/direct/Father';
 //import Father from './componentes/indirect/Father';
 //import CounterV2 from './componentes/contador/CounterV2';
-import Diferential from './components/Diferential';
+//import Diferential from './components/Diferential';
+import EvenOdd from './components/EvenOdd';
 
 export default () => (
-    <View style={style.App}>
-        <Diferential />
-        {/*<CounterV2 />
+    <SafeAreaView style={style.App}>
+        <EvenOdd num={5}/>
+        {/*<Diferential />
+        <CounterV2 />
         <Father />
         <Father />
         <Counter inicial={100} passo={2} />
@@ -32,7 +34,7 @@ export default () => (
         <Comp1 />
         <Comp2 />
         <First />*/}
-    </View>
+    </SafeAreaView>
 )
 
 const style = StyleSheet.create({
