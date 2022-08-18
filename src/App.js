@@ -13,11 +13,13 @@ import { StyleSheet, SafeAreaView } from 'react-native';
 //import CounterV2 from './componentes/contador/CounterV2';
 //import Diferential from './components/Diferential';
 //import EvenOdd from './components/EvenOdd';
-import Father from './components/relation/Father';
-import Son from './components/relation/Son';
+//import Father from './components/relation/Father';
+//import Son from './components/relation/Son';
+//import LogedUser from './components/LogedUser';
 
 export default () => (
     <SafeAreaView style={style.App}>
+        {/*<LogedUser user={{name: 'Gui', email:'gui@gui.com'}}/>
         <Father>
             <Son name="Bernardo" sobrenome="Matuchewski"/>
             <Son name="Guilherme" sobrenome="Matucheski"/>
@@ -27,7 +29,7 @@ export default () => (
             <Son name="Ana" sobrenome="Silva"/>
             <Son name="Julia" sobrenome="Silva"/>
         </Father>
-        {/*<EvenOdd num={5}/>
+        <EvenOdd num={5}/>
         <Diferential />
         <CounterV2 />
         <Father />
