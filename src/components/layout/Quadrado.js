@@ -9,7 +9,6 @@ export default props => {
             width: lado,
             backgroundColor: props.cor || '#000'
         }}>
-
         </View>
     )
 }
