@@ -5,5 +5,9 @@ export default StyleSheet.create({
         fontSize: 32,
         textAlign: "center",
         color: '#000'
+    },
+
+    smallText: {
+        color: '#000'
     }
 })
