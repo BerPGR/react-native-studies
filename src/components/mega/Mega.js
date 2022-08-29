@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-import { Text, TextInput } from 'react-native';
+import { Text, TextInput, Button } from 'react-native';
 import Style from '../style';
 
 export default class Mega extends Component {
 
     state = {
-        qtdNumeros: this.props.qtdNumeros
+        qtdNumeros: this.props.qtdNumeros,
+        numeros: []
     }
 
     alterarQtdNumero = (qtde) => {
-        this.setState({ qtdNumeros: qtde })
+        this.setState({ qtdNumeros: +qtde })
+    }
+
+    gerarNumeroNaoContido = nums => {
+        const novo = parseInt(Math.random() * 60) + 1;
+        return nums.includes(novo) ? this.gerarNumeroNaoContido(nums) : novo
+    }
+
+    gerarNumeros = () => {
+        const numeros = Array(this.state.qtdNumeros)
+        .fill()
+        .reduce(nums => [...nums, this.gerarNumeroNaoContido(nums)], [])
+        .sort((a, b) => a - b)
+        this.setState({ numeros })
     }
 
     render() {
@@ -17,14 +31,19 @@ export default class Mega extends Component {
             <>
                 <Text style={Style.txtG}>
                     Gerador de Mega-Sena 
-                    {this.state.qtdNumeros}
                 </Text>
                 <TextInput 
                     keyboardType={'numeric'}
                     style={{borderBottomWidth: 1}}
                     placeholder='Qtd de numeros'
-                    value={this.state.qtdNumeros}
-                    onChangeText={this.alterarQtdNumero}/>
+                    value={`${this.state.qtdNumeros}`}
+                    onChangeText={this.alterarQtdNumero}
+                />
+                <Button 
+                    title='Gerar'
+                    onPress={this.gerarNumeros}
+                />
+                <Text>{this.state.numeros.join(', ')}</Text>
             </>
         )
     }
